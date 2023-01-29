@@ -1,0 +1,50 @@
+// body{
+    /* background-image: url('assets/images/price-tracker-bg.png'); */
+    // background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(assets/images/price-tracker-bg.png);
+//     background: none;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-attachment: fixed;
+//   }
+
+.WatchListContainer{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    // background: none;
+
+    h1{
+        margin-top: 4rem !important;
+    }
+
+    // table{
+        // margin-top: 2rem !important;
+    // }
+}
+
+.TableHeader{
+    position: sticky;
+    top: 0px;
+    // background: blanchedalmond;
+    // background: royalblue;
+    // royalblue hash: #4169E1
+    // background: rgba(58, 36, 184, 0.8);;
+    background: rgba(65, 105, 225, 0.8);;
+    // filter: brightness(0.9);
+
+    th{
+        color: white;
+        font-weight: bold;
+    }
+}
+
+.TableSuccess{
+    // background-color: palegreen !important;
+    background-color: #D3F8D3 !important;
+}
+
+.TableDanger{
+    // background-color: lightcoral !important;
+    // background-color: #FFF4F3 !important;
+    background-color: #FFEAE9 !important;
+}
