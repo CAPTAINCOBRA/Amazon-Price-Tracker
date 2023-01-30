@@ -1,21 +1,13 @@
 import React, { Component } from "react";
-
-// if (allProducts.length < 10) {
-//   throw new Error("I crashed!");
-// }
-
+import "./ErrorBound.scss";
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-
     this.logErrorToMyService = this.logErrorToMyService.bind(this);
-
-    // this.componentDidCatch = this.componentDidCatch.bind(this); //No need
   }
 
   static getDerivedStateFromError(error) {
-    // Update state so the next render will show the fallback UI.
     return { hasError: true };
   }
 
@@ -25,15 +17,22 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    this.setState({ hasError: true }); // this part handled in getDerivedStatefromError
-    // You can also log the error to an error reporting service
+    this.setState({ hasError: true });
     this.logErrorToMyService(error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
-      // You can render any custom fallback UI
-      return <h1>Something went wrong.</h1>;
+      return (
+        <div className="Error">
+          <h1 className="ErrorMessage">
+            Something went wrong. If its a bug, Please contact Ekansh Baweja{" "}
+            <a href="" target="_blank">
+              here
+            </a>
+          </h1>
+        </div>
+      );
     }
 
     return this.props.children;

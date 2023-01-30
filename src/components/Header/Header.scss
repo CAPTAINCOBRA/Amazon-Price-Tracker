@@ -6,11 +6,16 @@ transform:translateY(0); transition: all 0.3s ease-in-out;
 }
 
 .navbar{
-    // background-color: cornflowerblue !important;
     position: fixed !important;
     width: 100%;
 }
 
 .logo{
   margin-left: 0.5rem;
+}
+
+.HeaderColor{
+  // background: linear-gradient(to right, #0f2027, #203a43, #2c5364) !important;
+  // background: linear-gradient(to right, #2c3e50, #bdc3c7 , #2c3e50) !important;
+  // background: linear-gradient(to right, #141e30 , #243b55) !important;
 }

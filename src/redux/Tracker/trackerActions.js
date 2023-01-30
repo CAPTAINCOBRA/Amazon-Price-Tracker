@@ -69,12 +69,10 @@ export const fetchAllItems = () => {
 };
 
 export const addToWatchList = () => async (dispatch, getState) => {
-  //
   const { searchedProductDetails, serverUrl } = getState().tracker;
   const URL = "/item/create";
   const obj = {
     name: searchedProductDetails.name,
-    // price: searchedProductDetails.price,
     imageUrl: searchedProductDetails.image,
     url: searchedProductDetails.url,
     description: searchedProductDetails.details,

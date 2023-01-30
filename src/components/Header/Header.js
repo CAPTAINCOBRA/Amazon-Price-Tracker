@@ -2,11 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { Nav, Navbar, Container, Image } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
 import "./Header.scss";
-// import "../../App.css";
 
 const Header = () => {
   const autoHideRef = useRef(null);
-  // const lastScrollTopRef = useRef(0);
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
   const onScroll = () => {
@@ -37,21 +35,18 @@ const Header = () => {
       <Navbar
         bg="dark"
         variant="dark"
-        className="autohide  sticky-top"
+        className="autohide sticky-top HeaderColor"
         ref={autoHideRef}
       >
         <Image src="/images/title_image.jpg" height={50} className="logo" />
-        {/* <Image src="/logo192.png" /> */}
+        {/* <Image src="/logo192.png" height={50} /> */}
         <Container>
           <Navbar.Brand as={Link} to="/">
             PriceWise
-            {/* <Link to="/home">PriceWise</Link> */}
           </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="home">
-              {/* <NavLink to="/home" style={{ textDecoration: "none" }}> */}
               Home
-              {/* </NavLink> */}
             </Nav.Link>
             <Nav.Link as={Link} to="watchlist">
               WatchList

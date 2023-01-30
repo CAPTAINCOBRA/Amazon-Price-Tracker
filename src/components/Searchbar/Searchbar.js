@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Form, Button, ListGroup, Card, Modal, Image } from "react-bootstrap";
 import { trackerSliceAction } from "../../redux/Tracker/trackerSlice";
@@ -60,7 +59,9 @@ const Searchbar = () => {
 
   const searchAmazon = async (e) => {
     e.preventDefault();
+    // No longer using the below approach
     // const productId = searchValue.split("/")[5];
+    // console.log("Product ID: ", productId);
     // await dispatch(trackerActions.searchAmazon(productId));
     await dispatch(trackerActions.searchAmazon(searchValue));
   };

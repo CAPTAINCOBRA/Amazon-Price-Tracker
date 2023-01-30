@@ -12,8 +12,8 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { Grid } from "@mui/material";
 import "./WatchList.scss";
+import AsyncImage from "../AsyncImage/AsyncImage";
 
 ChartJS.register(
   CategoryScale,
@@ -70,7 +70,7 @@ const WatchList = () => {
     const labels = getLabels(product);
 
     return {
-      labels, // use labels name here only
+      labels, // use labels name here only. Had to debug this for 2 hours
       datasets: [
         {
           label: "Price",
@@ -115,15 +115,15 @@ const WatchList = () => {
                 </td>
                 <td>
                   <a href={product.url} target="_blank">
-                    <Image
+                    {/* <Image
                       // style={{ height: "10rem", width: "10rem" }}
                       src={product.imageUrl}
-                    />
+                    /> */}
+                    <AsyncImage src={product.imageUrl} />
                   </a>
                 </td>
                 <td md="auto">{product.name}</td>
                 <td className={bgColorPrice(product)}>
-                  {/* {product.priceHistory[0].price} */}
                   {product.priceHistory[product.priceHistory.length - 1].price}
                 </td>
                 <td>{product.reqPrice}</td>

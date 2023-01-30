@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  //
   searchModal: false,
   searchValue: "",
   // serverUrl: "http://localhost:8000/api",

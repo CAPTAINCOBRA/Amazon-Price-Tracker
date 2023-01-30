@@ -33,3 +33,8 @@ transform:translateY(0); transition: all 0.3s ease-in-out;
   width: 100%;
   background-color: brown;
 }
+
+.sidebar{
+  position: relative;
+  z-index: 22;
+}
